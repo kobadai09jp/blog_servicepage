@@ -244,7 +244,7 @@
   // hero start
 
   &__hero {
-    background-image: url(https://images.servcorp.jp/blog/wp-content/uploads/2023/12/lp-blog-sp.jpg);
+    background-image: url(/blog/wp-content/uploads/2023/12/lp-blog-sp.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -252,7 +252,7 @@
     height: 50vh;
     position: relative;
     @include pc {
-        background-image: url(https://images.servcorp.jp/blog/wp-content/uploads/2023/12/lp-blog-pc.jpg);
+        background-image: url(/blog/wp-content/uploads/2023/12/lp-blog-pc.jpg);
 
         background-repeat: no-repeat;
         background-position: center;
