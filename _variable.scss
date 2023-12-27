@@ -1,0 +1,54 @@
+$buf:#FFF9EF;
+$gold:#E0A33A;
+$red:#D14D13;
+$bg-pop:#ddcfb8;
+$white:#ffffff;
+$brown:#503216;
+$bg-dark:#E1D9CD;
+$gold-hover:#d3ad6b;
+
+// flexbox
+@mixin flexPrimary ($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flexSecandary ($direction) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// breakpoint
+$sp: 575px;
+// $tab: 760px;
+$pc: 768px;
+
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (min-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+
+
+// @mixin media ($breakpoint) {
+//   @media (min-width:$breakpoint) {
+//     @content;
+//   }
+// }

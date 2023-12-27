@@ -1,0 +1,447 @@
+@import "./_variable.scss";
+@import "./reset";
+
+// @include flexPrimary(row);
+// @include pc {
+//   display: block;
+// }
+
+// .lp-blog__textbox__hero {
+//   background-image: url(https://images.servcorp.jp/blog/wp-content/uploads/2023/12/lp-blog-sp.jpg);
+//   @include pc {
+//     background-image: url(https://images.servcorp.jp/blog/wp-content/uploads/2023/12/lp-blog-pc.jpg);
+//     background-size: cover;
+//   }
+
+// }
+
+
+
+.lp-blog {
+  color: $brown;
+
+  .line {
+    margin: 5px 0;
+    display: block;
+    @include pc {
+      margin: 10px auto;
+    }
+  }
+  > section {
+    padding:45px 0;
+
+    @include pc {
+      padding: 60px 0;
+    }
+  }
+
+  .container {
+    padding:0 12px;
+    @include pc {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+  }
+
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    @include pc {
+      font-size: 35px;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    @include pc {
+      font-size: 22px;
+    }
+  }
+
+  .pc-none {
+    display: block;
+    @include pc {
+      display: none;
+    }
+  }
+  .sp-none {
+    display: none;
+    @include pc {
+      display: block;
+    }
+  }
+
+// comon voice start
+.comon-voice {
+  @include flexPrimary(row);
+  @include pc {
+    @include flexSecandary(row);
+  }
+  img {
+    width: 25%;
+    margin-right: 10px;
+    @include pc {
+      width: 150px;
+    }
+  }
+  &__pop {
+    width: 75%;
+    position: relative;
+    background-color: $white;
+    border: 4px solid $bg-pop;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 15px;
+    @include pc {
+      font-size: 20px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+    }
+    &::after {
+      position: absolute;
+      background: url(img/lp/section_popup01-sp.png) 0 0 no-repeat;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 13px;
+      background-size: contain;
+      display: block;
+      z-index: 2;
+      left: -4%;
+      @include pc {
+        left: -1.3%;
+        width: 10px;
+      }
+    }
+  }
+}
+// comon voice end
+
+// comon featre start
+.comon-feature {
+  background-color: $gold;
+  margin-top: 20px;
+  padding: 5px;
+  position: relative;
+  @include pc {
+    font-size: 21px;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.5;
+  }
+  &::after {
+    background: url(img/lp/box_bg01-sp.png) 0 0 no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 14px;
+    z-index: 2;
+    @include pc {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  p {
+    font-weight: bold;
+    color: $white;
+  }
+}
+// comon featre end
+
+  // comon case start 
+
+  .lp__comon {
+    margin-top: 25px;
+    &__case {
+      margin-top: 5px;
+  
+      @include pc {
+        @include flexPrimary(row);
+        align-items: start;
+      }
+      &__img {
+        position: relative;
+        &__label {
+          position: absolute;
+          bottom: 0%;
+          background: $brown;
+          color: $white;
+          padding:3px 10px 0 10px;
+          font-size: 13px;
+        }
+      }
+      >li {
+        background-color: $white;
+        @include sp {
+          &:not(:first-child) {
+            margin-top: 20px;
+          }
+        }
+        @include pc {
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+          width: 33.333%;
+        }
+      }
+      &__textbox {
+        p {
+          padding: 10px 5px;
+          @include pc {
+            height: 115px;
+            display: flex;
+            align-items: center;
+          }
+        }
+        a {
+          display: block;
+          background-color: $gold;
+          text-align: center;
+          font-weight: bold;
+          color: $white;
+          transition: all 0.3s;
+          padding: 10px;
+          &:hover {
+            background-color: $white;
+            color: $gold;
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+
+  }
+  // comon case emd 
+
+  // lp__comon__banner start
+  .lp__comon__banner {
+    margin-top: 45px;
+    @include flexPrimary(column);
+    a {
+      display: block;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:last-child {
+        margin-top: 15px;
+      }
+      @include pc {
+        margin: 20px auto 0;
+      }
+    }
+  }
+  // lp__comon__banner end
+
+
+  // hero start
+
+  &__hero {
+    background-image: url(https://images.servcorp.jp/blog/wp-content/uploads/2023/12/lp-blog-sp.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    @include pc {
+        background-image: url(https://images.servcorp.jp/blog/wp-content/uploads/2023/12/lp-blog-pc.jpg);
+
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 500px;
+    }
+    &__textbox {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 80%;
+      text-align: center;
+      color: $white;
+      z-index: 1;
+      @include pc {
+        transform: translate(-50%,-50%);
+      }
+      h1 {
+        font-size: 35px;
+        font-weight: bold;
+        @include pc {
+          font-size: 55px;
+
+        }
+      }
+      &__cta {
+        margin: 7px;
+
+        @include pc {
+          margin: 35px 0 0 0;
+        }
+        .btn {
+          color: #336699;
+      text-decoration: none;
+      padding: 5px 8px;
+      border-radius: 4px;
+      color:$white ;
+      font-weight: bold;
+      transition: all 0.3s;
+      &.mob-contact {
+        background-color: $gold;
+        &:hover {
+          background-color: $white;
+          color: $gold;
+          transition: all 0.3s;
+        }
+      }
+      &.mob-download {
+        background-color: $white;
+        color: $gold;
+        &:hover {
+          background-color: $gold;
+          color: $white;
+          transition: all 0.3s;
+        }
+        .mod-yellow {
+          background-color: $gold;
+          color: $white;
+          border-radius: 4px;
+      padding: 1px 5px;
+      margin-right: 5px;
+              &:hover {
+          background-color: $white;
+          color: $gold;
+          transition: all 0.3s;
+        }
+        }
+  
+      }
+        } 
+
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right:0;
+      left: 0;
+      bottom: 0;
+      background-color: black;
+      opacity: 0.3;
+    }
+
+  }
+  // hero end
+  // feature start 
+  &__feature {
+    background-color: $bg-dark;
+    border-top: solid $brown 5px;
+    &__wrapper {
+      text-align: center;
+      &__heading {
+        h3 {
+          font-size: 15px;
+          @include pc {
+            font-size: 18px;
+          }
+        }
+      }
+      &__product {
+        &__name {
+          background-color: $brown;
+          h3 {
+            color: $white;
+            font-size: 18px;
+            padding: 10px;
+            @include pc {
+              font-size: 20px;
+            }
+          }
+        }
+        @include pc {
+          margin-top: 10px;
+        }
+        > li {
+          background-color: $white;
+          margin-top: 15px;
+          @include pc {
+            margin: 7px
+          }
+        
+          img {
+            @include pc {
+              height: 200px;
+              object-fit: cover;
+            }
+          }
+
+        }
+        @include pc {
+          @include flexPrimary(row);
+        }
+        &__textbox {
+          p {
+            padding: 8px;
+          }
+          &__cta {
+            background-color: $gold;
+            display: block;
+            color: $white;
+            padding: 10px;
+            font-weight: bold;
+            transition: all 0.3s;
+            &:hover {
+              background-color: $white;
+              color: $gold;
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+  // feature end 
+  // product start 
+  &__product {
+    &__heading {
+      h2 {
+        border-bottom: 2px solid $brown;
+      }
+    }
+    &__wrapper {
+      margin-top: 25px;
+
+
+      &__so {
+        > li {
+          @include pc {
+            width: 50%;
+          }
+        }
+        background-color: $white;
+        margin-top: 25px;
+        @include pc {
+          @include flexPrimary(row);
+        }
+        &__info {
+          padding: 15px;
+          ul {
+            list-style-type: disc;
+            padding:10px 0 10px 15px;
+          }
+        }
+      }
+    } 
+  }
+  // product end 
+
+
+
+}
