@@ -355,6 +355,17 @@
   font-size: 13px;
 }
 
+.lp-blog .lp__comon__case__img__label.mod-small {
+  font-size: 10px;
+  padding: 4px 10px 0px 10px;
+}
+
+@media (min-width: 768px) {
+  .lp-blog .lp__comon__case__img__label.mod-small {
+    padding: 4px 10px;
+  }
+}
+
 .lp-blog .lp__comon__case > li {
   background-color: #ffffff;
 }
