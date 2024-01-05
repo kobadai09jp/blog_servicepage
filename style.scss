@@ -52,10 +52,18 @@
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     @include pc {
       font-size: 22px;
+    }
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: $gold;
+    @include pc {
+      font-size: 20px;
     }
   }
 
@@ -415,6 +423,7 @@
     }
   }
   // feature end 
+
   // product start 
   &__product {
     &__heading {
@@ -445,7 +454,93 @@
           }
         }
       }
+
     } 
+    &__vo {
+      margin: 25px 0;
+      @include pc {
+        margin:65px 0;
+      }
+      &__feature {
+        margin: 10px 0 45px;
+        @include pc {
+          @include flexPrimary(row);
+          flex-wrap: wrap;
+        }
+        >li {
+          background-color: $white;
+          padding: 10px;
+          @include pc {
+            @include flexPrimary(row);
+            width: 49%;
+            margin: 5px;
+            padding: 5px;
+            >div {
+              width: 40%;
+              margin-right: 10px;
+            }
+          }
+          @include sp {
+            &:not(:first-child) {
+              margin-top: 25px;
+            }
+          }
+        }
+        &__inside {
+          @include flexPrimary(column);
+          align-items: start;
+          padding: 15px 0;
+          li {
+            font-weight: bold;
+            &:last-child {
+              margin-top: 8px;
+            }
+          }
+          .point {
+            background-color:#E9E1D6;
+            display: inline-block;
+            padding: 2px 15px;
+          }
+
+        }
+        img {
+          @include sp {
+            height: 180px;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+      }
+        // service start
+  &__support {
+    &__wrapper {
+      background-color: $white;
+      @include pc {
+        @include flexPrimary(row);
+      }
+      &__textbox {
+        > ul {
+          padding:5px 3px 15px 10px ;
+          li {
+            margin-top: 15px;
+          }
+        }
+      }
+      &__img {
+        @include pc {
+          width: 40%;
+          margin-right: 30px;
+        }
+      }
+      &__textbox {
+        @include pc {
+          width: 60%;
+        }
+      }
+    }
+  }
+  // service end
+    }
   }
   // product end 
 
