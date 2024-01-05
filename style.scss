@@ -517,6 +517,8 @@
       background-color: $white;
       @include pc {
         @include flexPrimary(row);
+        padding: 10px 20px;
+        margin-top: 15px;
       }
       &__textbox {
         > ul {
@@ -528,7 +530,7 @@
       }
       &__img {
         @include pc {
-          width: 40%;
+          width: 50%;
           margin-right: 30px;
         }
       }
