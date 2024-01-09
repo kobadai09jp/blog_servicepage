@@ -634,6 +634,7 @@
 @media (min-width: 768px) {
   .lp-blog__feature__wrapper__product > li {
     margin: 7px;
+    width: 33%;
   }
 }
 
@@ -682,6 +683,24 @@
   color: #E0A33A;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media (min-width: 768px) {
+  .lp-blog__feature .mod-flow li {
+    width: 30%;
+    position: relative;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .lp-blog__feature .mod-flow li:not(:last-child)::after {
+    content: "\025b6" !important;
+    display: inline-block;
+    position: absolute;
+    left: 104% !important;
+    bottom: 40% !important;
+    font-size: 20px;
+  }
 }
 
 .lp-blog__product__heading h2 {
@@ -885,6 +904,77 @@
 @media (min-width: 768px) {
   .lp-blog__product__vo__support__wrapper__textbox {
     width: 60%;
+  }
+}
+
+.lp-blog__product__cw {
+  margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+  .lp-blog__product__cw__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 45px 0;
+  }
+}
+
+.lp-blog__product__cw__wrapper > li {
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .lp-blog__product__cw__wrapper > li {
+    width: 49%;
+  }
+}
+
+@media (max-width: 575px) {
+  .lp-blog__product__cw__wrapper > li:last-child {
+    margin-top: 15px;
+  }
+}
+
+.lp-blog__product__cw__wrapper > li div {
+  padding: 10px;
+}
+
+.lp-blog__product__cw__wrapper > li ul {
+  padding: 10px;
+  list-style: disc;
+}
+
+.lp-blog__product__cw__wrapper > li ul li {
+  margin-left: 25px;
+}
+
+.lp-blog__product__cw__wideimg {
+  position: relative;
+  margin: 25px 0 60px;
+}
+
+.lp-blog__product__cw__wideimg .disc-text {
+  position: absolute;
+  bottom: 0;
+  background-color: #503216;
+  color: #ffffff;
+  padding: 3px 15px 3px 5px;
+}
+
+@media (min-width: 768px) {
+  .lp-blog__product__cw__wideimg .disc-text {
+    padding: 3px 15px 3px 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */

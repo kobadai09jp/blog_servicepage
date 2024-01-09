@@ -387,7 +387,8 @@
           background-color: $white;
           margin-top: 15px;
           @include pc {
-            margin: 7px
+            margin: 7px;
+            width: 33%;
           }
         
           img {
@@ -416,6 +417,26 @@
               background-color: $white;
               color: $gold;
               transition: all 0.3s;
+            }
+          }
+        }
+      }
+    }
+    .mod-flow {
+      li {
+        @include pc {
+          width: 30%;
+          position: relative;
+          &:not(:last-child) {
+            &::after {
+              @include pc {
+                content: "\025b6" !important;
+                display: inline-block;
+                position: absolute;
+                left: 104% !important;
+                bottom: 40% !important;
+                font-size: 20px;
+              }
             }
           }
         }
@@ -542,6 +563,51 @@
     }
   }
   // service end
+    }
+    &__cw {
+      margin-top: 25px;
+      &__wrapper {
+        @include pc {
+          @include flexPrimary(row);
+          margin: 45px 0;
+        }
+        >li {
+          background-color: $white;
+          @include pc {
+            width: 49%;
+          }
+          @include sp {
+            &:last-child {
+              margin-top: 15px;
+            }
+          }
+          div {
+            padding: 10px;
+          }
+          ul {
+            padding: 10px;
+            list-style: disc;
+            li {
+              margin-left: 25px;
+            }
+          }
+        }
+      }
+      &__wideimg {
+        position: relative;
+        margin: 25px 0 60px;
+        
+        .disc-text {
+          position: absolute;
+          bottom: 0;
+          background-color: $brown;
+          color: $white;
+          padding: 3px 15px 3px 5px;
+          @include pc {
+            padding: 3px 15px 3px 5px;
+          }
+        }
+      }
     }
   }
   // product end 
