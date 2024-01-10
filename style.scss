@@ -543,6 +543,9 @@
           @include flexPrimary(column);
           align-items: start;
           padding: 15px 0;
+          @include pc {
+            width: 70%;
+          }
           li {
             font-weight: bold;
             &:last-child {
@@ -640,6 +643,7 @@
           }
         }
         .mod-img {
+          margin-top: 5px;
           @include pc {
             height: 400px;
             object-fit: cover;

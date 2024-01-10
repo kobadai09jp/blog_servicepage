@@ -890,6 +890,12 @@
   padding: 15px 0;
 }
 
+@media (min-width: 768px) {
+  .lp-blog__product__vo__feature__inside {
+    width: 70%;
+  }
+}
+
 .lp-blog__product__vo__feature__inside li {
   font-weight: bold;
 }
@@ -1027,6 +1033,10 @@
   .lp-blog__product__cw__wideimg .disc-text {
     padding: 3px 15px 3px 5px;
   }
+}
+
+.lp-blog__product__cw__wideimg .mod-img {
+  margin-top: 5px;
 }
 
 @media (min-width: 768px) {
