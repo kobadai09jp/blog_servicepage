@@ -382,6 +382,15 @@
   }
 }
 
+@media (max-width: 575px) {
+  .lp-blog .lp__comon__case__img img {
+    height: 220px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+  }
+}
+
 .lp-blog .lp__comon__case > li {
   background-color: #ffffff;
 }
@@ -1054,8 +1063,18 @@
 
 @media (min-width: 768px) {
   .lp-blog .p-lp-block {
-    width: 85%;
+    width: 65%;
     margin: 0 auto 100px;
+  }
+}
+
+.lp-blog .p-lp-block h2 {
+  font-size: 22px !important;
+}
+
+@media (min-width: 768px) {
+  .lp-blog .p-lp-block h2 {
+    font-size: 30px !important;
   }
 }
 

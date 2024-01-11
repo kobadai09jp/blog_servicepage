@@ -199,6 +199,13 @@
             }
           }
         }
+        img {
+          @include sp {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
       }
       >li {
         background-color: $white;
@@ -659,8 +666,14 @@
     width: 90%;
     margin: 0 auto 20px;
     @include pc {
-      width: 85%;
+      width: 65%;
       margin: 0 auto 100px;
+    }
+    h2 {
+      font-size: 22px !important;
+      @include pc {
+        font-size: 30px !important;
+      }
     }
   }
 
