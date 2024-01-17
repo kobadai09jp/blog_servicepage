@@ -270,6 +270,9 @@
   // lp__comon__banner end
 
 
+
+
+
   // hero start
 
   &__hero {
@@ -300,58 +303,108 @@
         transform: translate(-50%,-50%);
       }
       h1 {
-        font-size: 35px;
+        font-size: 22px;
         font-weight: bold;
         @include pc {
-          font-size: 55px;
+          font-size: 45px;
 
+        }
+      }
+      p {
+        @include pc {
+          font-size: 17px;
+          font-weight: bold;
         }
       }
       &__cta {
         margin: 7px;
+        @include flexPrimary(row);
+        gap: 15px;
 
         @include pc {
-          margin: 35px 0 0 0;
+          margin: 35px 0 15px 0;
+          justify-content: center;
         }
-        .btn {
-          color: #336699;
+        &__eachbox {
+          @include flexPrimary(column);
+
+          .btn {
+            color: #336699;
+        text-decoration: none;
+        padding: 5px 8px;
+        border-radius: 4px;
+        color:$white ;
+        font-weight: bold;
+        transition: all 0.3s;
+        &.mob-contact {
+          background-color: $gold;
+          &:hover {
+            background-color: $white;
+            color: $gold;
+            transition: all 0.3s;
+          }
+        }
+          } 
+    // button edited start
+    .btn-flat-border {
+      display: inline-block;
+      padding: 0.4em 1.8em;
       text-decoration: none;
-      padding: 5px 8px;
-      border-radius: 4px;
-      color:$white ;
-      font-weight: bold;
-      transition: all 0.3s;
-      &.mob-contact {
+      border-radius: 30px;
+      transition: .4s;
+      font-size: 12px;
+      width: 150px;
+      &.mod-file {
+        color: $white;
         background-color: $gold;
+        border: solid 2px $buf;
+        @include pc {
+          border: none;
+          // border-bottom: 8px solid #926a25;
+          box-shadow: 3px 6px 0px 0px #926a25, 0px 3px 20px 0px rgba(0,26,99,.2);
+          transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
         &:hover {
-          background-color: $white;
+          background: $white;
           color: $gold;
-          transition: all 0.3s;
+          box-shadow: none;
+          transform: translateY(6px) translateX(3px);
         }
       }
-      &.mob-download {
-        background-color: $white;
+      &.mod-contact {
         color: $gold;
+        background-color: $white;
+        border: solid 2px $gold;
+        @include pc {
+          border: none;
+          // border-bottom: 8px solid #bbbbbb;
+          box-shadow: 3px 6px 0px 0px #bbbbbb, 0px 3px 20px 0px rgba(0,26,99,.2);
+          transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
         &:hover {
-          background-color: $gold;
+          background: $gold;
           color: $white;
-          transition: all 0.3s;
+          box-shadow: none;
+          transform: translateY(6px) translateX(3px);
         }
-        .mod-yellow {
-          background-color: $gold;
-          color: $white;
-          border-radius: 4px;
-      padding: 1px 5px;
-      margin-right: 5px;
-              &:hover {
-          background-color: $white;
-          color: $gold;
-          transition: all 0.3s;
-        }
-        }
-  
       }
-        } 
+      @include pc {
+        font-size: 18px;
+        width: 215px;
+      }
+
+    }
+        }
+  // .mod-file {
+  //   &::before {
+  //     content: "＼ 世界150拠点以上 ／";
+  //     display: block;
+  //     position: relative;
+  //     top: -5%;
+
+  //   }
+  // }
+  // button edited end
 
       }
     }
@@ -489,6 +542,14 @@
     &__heading {
       h2 {
         border-bottom: 2px solid $brown;
+      }
+      .mod-price {
+        font-size: 19px;
+        display: block;
+        @include pc {
+          display: inline;
+          margin-left: 5px;
+        }
       }
     }
     &__wrapper {
